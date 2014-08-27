@@ -1,9 +1,11 @@
 // ==UserScript==
-// @name           Restore Youtube Embed Defaults
-// @description    Removes special options from Youtube embeds, resetting everything to defaults. Useful for restoring disabled buttons like fullscreen and watch on Youtube.
-// @exclude	   *.youtube.com/*
-// @version 0.0.1.20140511.1
-// @namespace https://greasyfork.org/users/910
+// @name            Restore Youtube Embed Defaults
+// @description     Removes special options from Youtube embeds, resetting everything to defaults. Useful for restoring disabled buttons like fullscreen and watch on Youtube.
+// @exclude	        *.youtube.com/*
+// @version         0.0.2
+// @namespace       https://greasyfork.org/users/910
+// @downloadURL     https://raw.githubusercontent.com/chaimleib/RestoreYoutubeEmbedDefaults/master/script.js
+// @updateURL       https://raw.githubusercontent.com/chaimleib/RestoreYoutubeEmbedDefaults/master/script.js
 // ==/UserScript==
 
 var i, j, k, index;
