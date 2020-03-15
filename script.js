@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name            Restore Youtube Embed Defaults
 // @description     Removes special options from Youtube embeds, resetting everything to defaults. Useful for restoring disabled buttons like fullscreen and watch on Youtube.
+// @include         *
 // @exclude	        *.youtube.com/*
-// @version         0.0.2
+// @version         0.0.3
 // @namespace       https://greasyfork.org/users/910
 // @downloadURL     https://raw.githubusercontent.com/chaimleib/RestoreYoutubeEmbedDefaults/master/script.js
 // @updateURL       https://raw.githubusercontent.com/chaimleib/RestoreYoutubeEmbedDefaults/master/script.js
@@ -49,21 +50,21 @@ for (i = 0; i < bad_ids.length; i++) {
 	video_url = "//www.youtube.com/embed/" + video_id;
 	video_link = document.createElement("iframe");
 	video_link.setAttribute("src", video_url);
-    
+
 	// Set the width, if present
-	width = bad_elements[i].getAttribute("width");    
+	width = bad_elements[i].getAttribute("width");
 	if ( width !== null ) {
 		video_link.setAttribute("width", width);
 	}
-    
+
 	// Set the height, if present
 	height = bad_elements[i].getAttribute("height");
 	if ( height !== null ) {
 		video_link.setAttribute("height", height);
 	}
-	
+
 	video_link.setAttribute("frameborder", "0");
 	video_link.setAttribute("allowfullscreen", "1");
-    
+
 	bad_elements[i].parentNode.replaceChild(video_link, bad_elements[i]);
 }
